@@ -23,13 +23,31 @@
     }
 
     @keyframes flash {
-      from {
-        color: yellow;
-      }
-      to {
-        color: red;
-      }
+      from { color: yellow; }
+      to { color: red; }
     }
+
+    /* BUTTON STYLES */
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: #ff5500;
+      border: 2px solid yellow;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: yellow;
+      color: red;
+      border-color: red;
+    }
+
   </style>
 
 </head>
@@ -39,6 +57,11 @@
 
   <h1 class="color-shift">HHS MINECRAFT SERVER</h1>
   <p class="color-shift">IP: HHS-Minecraft.eagler.host</p>
+
+  <!-- DOWNLOAD BUTTON -->
+  <a href="https://ineptdwarf33872.github.io/Eaglercraft-Website/EaglercraftX_1.8_u37_Offline_Signed.html" class="button" target="_blank">
+    Download Eaglercraft
+  </a>
 
 </body>
 </html>
