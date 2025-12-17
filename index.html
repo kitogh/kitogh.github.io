@@ -27,6 +27,50 @@
       to { color: red; }
     }
 
+    /* IP BOX */
+    .ip-box {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border: 3px solid yellow;
+      border-radius: 12px;
+      background: rgba(34,34,34,0.7); /* transparent Minecraft block vibe */
+      box-shadow: 0 0 15px yellow, 0 0 30px red;
+      animation: glow 2s infinite alternate;
+      overflow: hidden;
+    }
+
+    /* PULSE GLOW */
+    @keyframes glow {
+      from { box-shadow: 0 0 15px yellow, 0 0 30px red; }
+      to { box-shadow: 0 0 30px yellow, 0 0 60px red; }
+    }
+
+    /* PIXEL SPIKES CORNERS */
+    .ip-box::before, .ip-box::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: yellow;
+    }
+
+    .ip-box::before {
+      top: -5px;
+      left: -5px;
+      box-shadow: 0 0 0 0 yellow;
+    }
+
+    .ip-box::after {
+      bottom: -5px;
+      right: -5px;
+      box-shadow: 0 0 0 0 red;
+    }
+
     /* BUTTON STYLES */
     .button {
       display: inline-block;
@@ -46,6 +90,7 @@
       background: yellow;
       color: red;
       border-color: red;
+      box-shadow: 0 0 15px yellow, 0 0 30px red;
     }
 
   </style>
@@ -56,9 +101,12 @@
   <img src="logo.png" alt="Haverford Minecraft Logo" class="logo">
 
   <h1 class="color-shift">HHS MINECRAFT SERVER</h1>
-  <p class="color-shift">IP: HHS-Minecraft.eagler.host</p>
+
+  <!-- IP BOX -->
+  <div class="ip-box">IP: HHS-Minecraft.eagler.host</div>
 
   <!-- DOWNLOAD BUTTON -->
+  <br>
   <a href="https://ineptdwarf33872.github.io/Eaglercraft-Website/EaglercraftX_1.8_u37_Offline_Signed.html" class="button" target="_blank">
     Download Eaglercraft
   </a>
