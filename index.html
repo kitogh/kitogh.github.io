@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Page</title>
+  <title>HHS Minecraft Server</title>
 
   <style>
     body {
       background: #0f0f0f;
-      color: red;
       font-family: Arial, sans-serif;
       text-align: center;
       padding-top: 40px;
@@ -17,16 +16,29 @@
       margin: 0 auto 20px auto;
       width: 300px;
     }
+
+    /* COLOR SHIFT ANIMATION */
+    .color-shift {
+      animation: flash 1.5s infinite alternate;
+    }
+
+    @keyframes flash {
+      from {
+        color: yellow;
+      }
+      to {
+        color: red;
+      }
+    }
   </style>
 
 </head>
 <body>
 
-  <!-- IMAGE GOES HERE -->
   <img src="logo.png" alt="Haverford Minecraft Logo" class="logo">
 
-  <h1>HHS MINECRAFT SERVER</h1>
-  <p>IP: HHS-Minecraft.eagler.host</p>
+  <h1 class="color-shift">HHS MINECRAFT SERVER</h1>
+  <p class="color-shift">IP: HHS-Minecraft.eagler.host</p>
 
 </body>
 </html>
