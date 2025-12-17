@@ -1,2 +1,15 @@
-# kitogh.github.io
-HHS MINECRAFT SERVER    HHS-Minecraft.eagler.host
+HHS MINECRAFT SERVER
+
+ 
+IP: HHS-Minecraft.eagler.host
+
+
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #00ffcc;
+}
