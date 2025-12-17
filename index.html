@@ -8,19 +8,22 @@
 
   <style>
     body {
-      /* CUSTOM BACKGROUND IMAGE */
-      background-image: url('background.png');
-      background-repeat: no-repeat;
-      background-size: cover; /* fill whole screen */
-      background-position: center;
-      
       font-family: 'Press Start 2P', cursive;
       text-align: center;
       padding-top: 40px;
       overflow-x: hidden;
       position: relative;
+
+      /* SCROLLING BACKGROUND */
+      background-image: url('background.png');
+      background-repeat: repeat;
+      background-size: cover;
+      animation: scrollBg 30s linear infinite;
     }
 
+    @keyframes scrollBg {
+      0% { background-position: center 0; }
+      100% { background-position: center 1000px; } /* scroll down 1000px over 30s */
     }
 
     /* COLOR SHIFT ANIMATION */
@@ -67,13 +70,11 @@
       cursor: default;
     }
 
-    /* PULSE GLOW */
     @keyframes glow {
       from { box-shadow: 0 0 30px yellow, 0 0 60px red; }
       to { box-shadow: 0 0 50px yellow, 0 0 100px red; }
     }
 
-    /* SHAKE ON HOVER */
     .ip-box:hover {
       animation: shake 0.3s infinite alternate, glow 2s infinite alternate;
     }
@@ -135,8 +136,6 @@
   <div class="particle" style="top:95%; left:50%; animation-delay:1s;"></div>
   <div class="particle" style="top:85%; left:80%; animation-delay:2s;"></div>
   <div class="particle" style="top:92%; left:35%; animation-delay:1.5s;"></div>
-
-  <img src="logo.png" alt="Haverford Minecraft Logo" class="logo">
 
   <h1 class="color-shift">HHS MINECRAFT SERVER</h1>
 
